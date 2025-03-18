@@ -6,11 +6,11 @@ SQL Sports Betting group project from MIST 4610 with Dr. Akshat Lakhiwal
 
 ## Team Members:
 
-1) Dylan Palenik: [@DylanPalenik1](https://github.com/dylanpalenik1)
-2) Aakash Dholakia: [@AakashDholakia](https://github.com/AakashDholakia)
-3) Dan Kerik: [@Dan-Kerik](https://github.com/dan-kerik)
-4) Hayley Daniels: [@HayleyDaniels](https://github.com/hayleydaniels)
-5) Jordan Beal: [@JordanBeal](https://github.com/Jlb65166)
-6)  Lexie-Anne Rodkey: [@LexieRodkey](https://github.com/lexierodkey)
+1) Tobey Barden
+2) Daniel Pritchard
+3) Ian
+4) Austin
+5) Owen
 
 ## Problem Description:
+
