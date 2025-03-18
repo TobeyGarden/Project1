@@ -13,4 +13,5 @@ SQL Sports Betting group project from MIST 4610 with Dr. Akshat Lakhiwal
 5) Owen
 
 ## Problem Description:
+We are creating a sports betting SQL model
 
