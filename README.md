@@ -16,5 +16,5 @@ SQL Sports Betting group project from MIST 4610 with Dr. Akshat Lakhiwal
 We are creating a sports betting SQL model
 
 ## Data Dictionary
-
+![Data_Dictionary_All_Pages](https://github.com/user-attachments/assets/68a5a6f0-19a1-4c3d-98d0-fcbcf3f358a6)
 
