@@ -46,11 +46,8 @@ Events lists all of the events that users can place bets on. It has a one-to-man
 
 
 
+![q2](https://github.com/user-attachments/assets/af5c3e45-75a9-4a15-9b04-5f33ac616e98)
 
--- Query 2
-Query 2 allows the managers to calculate the total amount of bets that have been placed on the app across all users. This allows the managers to track the total activity that is happening on the app, as if there are a lot of total bets being placed that means the app is running successfully and is being used a lot, which means there is a lot of activity on the app and large changes are not needed to ensure the app gains users or more activity.
-
-SELECT COUNT(betID) AS total_bets FROM Bets;
 
 <img width="506" alt="Screenshot 2025-03-20 at 16 21 45" src="https://github.com/user-attachments/assets/a76c96a7-ebda-4059-b990-b51d4a878b67" />
 
