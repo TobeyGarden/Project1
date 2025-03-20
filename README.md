@@ -122,24 +122,14 @@ LIMIT 1;
 
 
 
-
--- Query 8 
-SELECT Users.userID, Users.userName
-FROM Users
-JOIN Users_Have_Promotions ON Users.userID = Users_Have_Promotions.Users_userID
-LEFT JOIN Bets ON Users.userID = Bets.Users_userID
-WHERE Bets.betID IS NULL;
+![q8](https://github.com/user-attachments/assets/a0acac70-dc8e-402d-95ff-aa28ef36530d)
 
 
 
 
--- Query 9 
-SELECT Sporting_Events.eventName, COUNT(Bets.betID) AS total_bets, SUM(Bets.betAmount) AS total_amount
-FROM Sporting_Events
-JOIN Bets ON Sporting_Events.eventID = Bets.timePlaced
-GROUP BY Sporting_Events.eventName
-ORDER BY total_bets DESC
-LIMIT 3;
+
+![q9](https://github.com/user-attachments/assets/73e0ad82-4d38-468b-9054-507a5fdcba16)
+
 
 
 -- Query 10 
