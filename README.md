@@ -32,7 +32,7 @@ Bets is another very important entity because this is where a majority of the ac
 Events lists all of the events that users can place bets on. It has a one-to-many relationship with both Promotions and Bets since every event will have many Promotions that can be used on it and bets that can be placed on it. Sports has a one-to-many relationship with Events due to one sport having many different events it can be performed. Sports additionally has a one-to-many relationship with Teams as one sport will have many different teams. Teams also has a one-to-many relationship with Player, as one team will have many different players as well.
 
 
-
+<img width="918" alt="Screenshot 2025-03-20 at 17 14 45 1" src="https://github.com/user-attachments/assets/18c98668-1891-4197-9c83-8f34441d1269" />
 
 ## Data Dictionary
 ![Data_dictionary_combined](https://github.com/user-attachments/assets/bfb32ee3-b4bd-4ede-937a-518ed1a8747b)
