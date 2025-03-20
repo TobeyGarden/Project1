@@ -36,6 +36,7 @@ Events lists all of the events that users can place bets on. It has a one-to-man
 ## Data Dictionary
 ![Data_dictionary_combined](https://github.com/user-attachments/assets/bfb32ee3-b4bd-4ede-937a-518ed1a8747b)
 
+## Queries Matrix
 
 ## Queries
 ![q1](https://github.com/user-attachments/assets/0f85fada-79b0-43f7-b8af-4a9369260ec3)
