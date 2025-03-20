@@ -42,13 +42,12 @@ Query 1 retrieves the username and email of any user on the database who has pla
 
 SELECT userName, userEmail
 FROM Users
-WHERE EXISTS (SELECT* FROM Bets WHERE Users.userID=Bets.userID);
+WHERE EXISTS (SELECT* FROM Bets WHERE Users.userID=Bets.Users_userID);
+<img width="651" alt="Screenshot 2025-03-20 at 16 19 10" src="https://github.com/user-attachments/assets/cfac2e3c-4851-47fc-8eb1-aa3ae075ccd9" />
+
 
 Query 1 is important for managers because it allows them to see what users have actually placed bets within the site. People often make accounts on sports betting websites but never actually end up placing any bets. Since the website profits are dependent on users making bets it is very useful information to see which users are actually contributing and send them promotions or rewards to their email. 
 
-SELECT userName, userEmail
-FROM Users
-WHERE EXISTS (SELECT* FROM Bets WHERE Users.userID=Bets.Users_userID);
 
 
 
@@ -72,17 +71,14 @@ Query 4 retrieves the username, type of bet, odds on the bet, amount placed, and
 
 SELECT userName, betType, betAmount, betOdds, betResults
 FROM Bets
-JOIN Users ON Bets.userID=Users.userID
-WHERE betAmount > 200
-ORDER BY betAmount DESC;
-
-Query 4 is important for managers to see the risky activity within the site. Many users will join to place small bets every now and then with little risk to the company or themselves; however, there are serious betters who often place much larger bets in the hopes of achieving serious payouts. This query allows managers to filter out the smaller bets and be able to see the activity within the much riskier and important side of the site which could have major effects on the success of the company. 
-
-SELECT userName, betType, betAmount, betOdds, betResults
-FROM Bets
 JOIN Users ON Bets.Users_userID=Users.userID
 WHERE betAmount > 200
 ORDER BY betAmount DESC;
+<img width="651" alt="Screenshot 2025-03-20 at 16 16 43" src="https://github.com/user-attachments/assets/8edb05d0-1443-41e0-a6bb-58aaddbe0adc" />
+
+
+Query 4 is important for managers to see the risky activity within the site. Many users will join to place small bets every now and then with little risk to the company or themselves; however, there are serious betters who often place much larger bets in the hopes of achieving serious payouts. This query allows managers to filter out the smaller bets and be able to see the activity within the much riskier and important side of the site which could have major effects on the success of the company. 
+
 
 
 
