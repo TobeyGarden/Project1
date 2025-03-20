@@ -10,10 +10,10 @@ SQL Sports Betting group project from MIST 4610 with Dr. Akshat Lakhiwal
 2) Daniel Pritchard
 3) Ian
 4) Austin
-5) Owen
+5) Owen Herring
 
 ## Problem Description:
-We are creating a sports betting SQL model
+We are creating a relational database for a sports betting application that allows users to place bets on both teams and individual players at various sporting events, track odds and promotions for those bets, and process the user transactions correctly. The database stores and retrieves data for users, promotions, account balances, bets, transactions, payments, sports, sporting events, teams, and players.
 
 ## Data Model
 ![Screenshot 2025-03-19 at 13 44 11](https://github.com/user-attachments/assets/80501dff-7c60-4de9-8783-4ff25d652716)
