@@ -56,6 +56,8 @@ Query 1 is important for managers because it allows them to see what users have 
 -- Query 2
 SELECT COUNT(betID) AS total_bets FROM Bets;
 
+<img width="506" alt="Screenshot 2025-03-20 at 16 21 45" src="https://github.com/user-attachments/assets/a76c96a7-ebda-4059-b990-b51d4a878b67" />
+
 
 
 
@@ -65,6 +67,7 @@ FROM Promotions
 WHERE promotionStatus = 'Active';
 
 
+<img width="651" alt="Screenshot 2025-03-20 at 16 19 10" src="https://github.com/user-attachments/assets/1d86a675-c9af-4934-90f0-9d3cfc600780" />
 
 
 -- Query 4
