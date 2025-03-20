@@ -30,7 +30,8 @@ Additionally, Users has a one-to-many relationship with Bets, as each user can p
 Bets is another very important entity because this is where a majority of the actions on the app will take place. It has a one-to-many relationship with Transactions since it records all of the money put into and paid out of an individual bet. 
 
 Events lists all of the events that users can place bets on. It has a one-to-many relationship with both Promotions and Bets since every event will have many Promotions that can be used on it and bets that can be placed on it. Sports has a one-to-many relationship with Events due to one sport having many different events it can be performed. Sports additionally has a one-to-many relationship with Teams as one sport will have many different teams. Teams also has a one-to-many relationship with Player, as one team will have many different players as well.
-![Screenshot 2025-03-19 at 13 44 11](https://github.com/user-attachments/assets/80501dff-7c60-4de9-8783-4ff25d652716)
+
+
 
 
 ## Data Dictionary
