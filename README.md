@@ -7,7 +7,7 @@ SQL Sports Betting group project from MIST 4610 with Dr. Akshat Lakhiwal
 ## Team Members:
 
 1) Tobey Barden 
-2) Daniel Pritchard
+2) Daniel Pritchard @dcpritch
 3) Ian
 4) Austin
 5) Owen Herring
