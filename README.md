@@ -39,6 +39,9 @@ Events lists all of the events that users can place bets on. It has a one-to-man
 
 ## Queries Matrix
 
+![image](https://github.com/user-attachments/assets/a15a1b83-3825-4dfe-9771-66d73b3cbb7c)
+
+
 ## Queries
 ![q1](https://github.com/user-attachments/assets/0f85fada-79b0-43f7-b8af-4a9369260ec3)
 
