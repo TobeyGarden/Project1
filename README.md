@@ -88,9 +88,8 @@ Query 5 is a great way for managers to see the betting activity and style of eac
 
 
 
+![q7](https://github.com/user-attachments/assets/2fa692e7-ff99-4bcc-856c-3ce7cc45066a)
 
--- Query 7 
-This query enables the operators to identify how many bets have won, lost, and drawn, and how much money has been lost or won due to the results of those bets. This helps the managers keep track of how much money is going in and out of the app due to the results of the bets, and why that money is being moved. Any money from a lose will be paid out back to the app, any money from a draw will be returned to the user, and any money from a win will be returned to the user along with the payout they receive from winning the bet.
 
 <img width="653" alt="Screenshot 2025-03-20 at 16 27 06" src="https://github.com/user-attachments/assets/c388983f-5fd2-4c54-a5c9-439aa9c698b1" />
 
