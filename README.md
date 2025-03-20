@@ -34,7 +34,8 @@ Sporting Events lists all of the events that users can place bets on. It has a o
 
 
 ## Data Dictionary
-![Data_Dictionary_All_Pages](https://github.com/user-attachments/assets/68a5a6f0-19a1-4c3d-98d0-fcbcf3f358a6)
+![Data_dictionary_combined](https://github.com/user-attachments/assets/bfb32ee3-b4bd-4ede-937a-518ed1a8747b)
+
 
 ## Queries
 ![q1](https://github.com/user-attachments/assets/0f85fada-79b0-43f7-b8af-4a9369260ec3)
