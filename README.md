@@ -37,14 +37,123 @@ Sporting Events lists all of the events that users can place bets on. It has a o
 ![Data_Dictionary_All_Pages](https://github.com/user-attachments/assets/68a5a6f0-19a1-4c3d-98d0-fcbcf3f358a6)
 
 ## Queries
+-- Query 1
+Query 1 retrieves the username and email of any user on the database who has placed a bet at any time. It uses the ‘Exists’ function to see if the user has any rows in the ‘Bets’ entity before retrieving the selected information from the ‘Users’ entity.
+
+SELECT userName, userEmail
+FROM Users
+WHERE EXISTS (SELECT* FROM Bets WHERE Users.userID=Bets.userID);
+
+Query 1 is important for managers because it allows them to see what users have actually placed bets within the site. People often make accounts on sports betting websites but never actually end up placing any bets. Since the website profits are dependent on users making bets it is very useful information to see which users are actually contributing and send them promotions or rewards to their email. 
+
+SELECT userName, userEmail
+FROM Users
+WHERE EXISTS (SELECT* FROM Bets WHERE Users.userID=Bets.Users_userID);
 
 
 
-Query 9
+
+-- Query 2
+SELECT COUNT(betID) AS total_bets FROM Bets;
 
 
 
-Query 10
+
+-- Query 3 
+SELECT COUNT(promotionID) AS active_promotions 
+FROM Promotions 
+WHERE promotionStatus = 'Active';
+
+
+
+
+-- Query 4
+Query 4 retrieves the username, type of bet, odds on the bet, amount placed, and the result of the bet from the bets entity within the database. It joins the user and bets entity with users serving as the parent and bets as the child. The query retrieves the data on bets where the amount placed exceeds 200 dollars and orders the results from largest to smallest.
+
+SELECT userName, betType, betAmount, betOdds, betResults
+FROM Bets
+JOIN Users ON Bets.userID=Users.userID
+WHERE betAmount > 200
+ORDER BY betAmount DESC;
+
+Query 4 is important for managers to see the risky activity within the site. Many users will join to place small bets every now and then with little risk to the company or themselves; however, there are serious betters who often place much larger bets in the hopes of achieving serious payouts. This query allows managers to filter out the smaller bets and be able to see the activity within the much riskier and important side of the site which could have major effects on the success of the company. 
+
+SELECT userName, betType, betAmount, betOdds, betResults
+FROM Bets
+JOIN Users ON Bets.Users_userID=Users.userID
+WHERE betAmount > 200
+ORDER BY betAmount DESC;
+
+
+
+
+-- Query 5
+SELECT Users.userID, Users.userName, SUM(Bets.betAmount) AS total_bet_amount
+FROM Users
+JOIN Bets ON Users.userID = Bets.Users_userID
+GROUP BY Users.userID, Users.userName
+ORDER BY total_bet_amount DESC
+LIMIT 5;
+
+
+-- Query 6 
+SELECT 
+    Users.userID, 
+    Users.userName, 
+    SUM(Payments.paymentAmount) AS total_deposits, 
+    SUM(Transactions.transactionAmount) AS total_bets, 
+    (SUM(Payments.paymentAmount) - SUM(Transactions.transactionAmount)) AS net_balance
+FROM Users
+JOIN Payments ON Users.userID = Payments.Balance_acctID
+JOIN Transactions ON Users.userID = Transactions.Balance_acctID
+GROUP BY Users.userID, Users.userName;
+
+
+
+
+-- Query 7 
+SELECT betType, COUNT(betID) AS total_bets, SUM(betAmount) AS total_amount
+FROM Bets
+GROUP BY betType
+ORDER BY total_bets DESC
+LIMIT 1;
+
+
+
+
+-- Query 8 
+SELECT Users.userID, Users.userName
+FROM Users
+JOIN Users_Have_Promotions ON Users.userID = Users_Have_Promotions.Users_userID
+LEFT JOIN Bets ON Users.userID = Bets.Users_userID
+WHERE Bets.betID IS NULL;
+
+
+
+
+-- Query 9 
+SELECT Sporting_Events.eventName, COUNT(Bets.betID) AS total_bets, SUM(Bets.betAmount) AS total_amount
+FROM Sporting_Events
+JOIN Bets ON Sporting_Events.eventID = Bets.timePlaced
+GROUP BY Sporting_Events.eventName
+ORDER BY total_bets DESC
+LIMIT 3;
+
+
+-- Query 10 
+SELECT userID, userName, 
+       (SELECT SUM(Bets.betAmount) 
+        FROM Bets 
+        WHERE Bets.Users_userID = Users.userID) AS total_user_bets
+FROM Users
+WHERE (SELECT SUM(Bets.betAmount) 
+       FROM Bets 
+       WHERE Bets.Users_userID = Users.userID) > 
+      (SELECT AVG(user_total_bets) 
+       FROM (SELECT Users.userID, SUM(Bets.betAmount) AS user_total_bets
+             FROM Users
+             JOIN Bets ON Users.userID = Bets.Users_userID
+             GROUP BY Users.userID) AS avg_bets);
 
 <img width="651" alt="Screenshot 2025-03-20 at 15 52 40" src="https://github.com/user-attachments/assets/39944f87-127f-4ba8-a945-79991339250d" />
 
