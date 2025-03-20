@@ -6,11 +6,11 @@ SQL Sports Betting group project from MIST 4610 with Dr. Akshat Lakhiwal
 
 ## Team Members:
 
-1) Tobey Barden @TobeyGarden
-2) Daniel Pritchard @dcpritch
-3) Ian Arnold @ian-uga
-4) Austin Zeiller @Austinz7303
-5) Owen Herring @Oherring22
+1) Tobey Barden [@TobeyGarden](https://github.com/TobeyGarden/Project1/edit/main/README.md)
+2) Daniel Pritchard [@dcpritch](https://github.com/TobeyGarden/Project1/edit/main/README.md)
+3) Ian Arnold [@ian-uga](https://github.com/TobeyGarden/Project1/edit/main/README.md)
+4) Austin Zeiller [@Austinz7303](https://github.com/TobeyGarden/Project1/edit/main/README.md)
+5) Owen Herring [@Oherring22](https://github.com/TobeyGarden/Project1/edit/main/README.md)
 
 ## Problem Description:
 We are creating a relational database for a sports betting application that allows users to place bets on both teams and individual players at various sporting events, track odds and promotions for those bets, and process the user transactions correctly. The database stores and retrieves data for users, promotions, account balances, bets, transactions, payments, sports, sporting events, teams, and players.
