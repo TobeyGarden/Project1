@@ -62,10 +62,13 @@ SELECT COUNT(betID) AS total_bets FROM Bets;
 
 
 -- Query 3 
+Query 3 retrieves the number of active promotions on the website. It does so by finding the count of promotions from the promotion entity, but only where the status of the promotion is listed as active. 
+
 SELECT COUNT(promotionID) AS active_promotions 
 FROM Promotions 
 WHERE promotionStatus = 'Active';
 
+Query 3 is very important for managers because it allows them to keep track of how many promotions are currently active for users to utilize on the site. Promotions are an effective way to get users to place more bets which makes them an extremely important part of any betting website; however, if there are too many promotions active, the site will be losing money. By using this query, the manager can be sure that there are just enough promotions active to draw customers to the site, but not too much that it does damage to the profit of the site.
 
 <img width="518" alt="Screenshot 2025-03-20 at 16 22 13" src="https://github.com/user-attachments/assets/41ec4200-1e47-48e4-b190-ee14d554ca30" />
 
