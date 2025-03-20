@@ -117,5 +117,7 @@ Events lists all of the events that users can place bets on. It has a one-to-man
 
 <img width="651" alt="Screenshot 2025-03-20 at 15 52 40" src="https://github.com/user-attachments/assets/39944f87-127f-4ba8-a945-79991339250d" />
 
+## Database Information
+Name of Database: al_Group_21484_G8
 
 
