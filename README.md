@@ -79,7 +79,7 @@ SELECT COUNT(betID) AS total_bets FROM Bets;
 
 
 
--- Query 6 
+![q6](https://github.com/user-attachments/assets/e93822ad-0884-499e-8d40-73c4a0c9c2f8)
 
 
 <img width="767" alt="Screenshot 2025-03-20 at 16 30 17" src="https://github.com/user-attachments/assets/2623dc63-055b-49c1-8025-a79f27b51114" />
