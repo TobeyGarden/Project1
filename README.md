@@ -25,11 +25,11 @@ There are 11 entities needed for our database. These entities include Users, Pro
 
 We begin with Users, which has a relationship with many other entities since Users are the ones who perform all of the actions on the sports betting app. It contains a one-to-one relationship with Balance, as each User will only have one account balance that tracks how much money is going in and out of their account. The Balance has a one-to-many relationship with both Transactions and Payments, as they are both used to report changes that occur within a user's account. Each user's account will record many different financial transactions and payments that happen on the app. Transactions records the money that is spent and received every time a user places a bet, while Payments records money that the user adds and removes to their account balance from outside of the app. However, the relationship between Balance, and Transactions and Payments is non-identifying as Balance is not reliant on these entities to exist since a user might choose to make an account yet not change their balance at all.
 
-Additionally, Users has a one-to-many relationship with Bets, as each user can place many different types of bets. Additionally, Users has a many-to-many relationship with Promotions, as many users can redeem many different types of promotions, while many promotions can be applied to many different users. Because it is a many-to-many relationship, we have created an associative entity titled Users_has_Promotions, which has the primary keys from Users and Promotions as foreign keys.
+Additionally, Users has a one-to-many relationship with Bets, as each user can place many different types of bets. Additionally, Users has a many-to-many relationship with Promotions, as many users can redeem many different types of promotions, while many promotions can be applied to many different users. Because it is a many-to-many relationship, we have created an associative entity titled Redeem, which has the primary keys from Users and Promotions as foreign keys.
 
 Bets is another very important entity because this is where a majority of the actions on the app will take place. It has a one-to-many relationship with Transactions since it records all of the money put into and paid out of an individual bet. 
 
-Sporting Events lists all of the events that users can place bets on. It has a one-to-many relationship with both Promotions and Bets since every Sporting Event will have many Promotions that can be used on it and bets that can be placed on it. Sports has a one-to-many relationship with Sporting Events due to one sport having many different events it can be performed. Sports additionally has a one-to-many relationship with Teams as one sport will have many different teams. Teams also has a one-to-many relationship with Player, as one team will have many different players as well.
+Events lists all of the events that users can place bets on. It has a one-to-many relationship with both Promotions and Bets since every event will have many Promotions that can be used on it and bets that can be placed on it. Sports has a one-to-many relationship with Events due to one sport having many different events it can be performed. Sports additionally has a one-to-many relationship with Teams as one sport will have many different teams. Teams also has a one-to-many relationship with Player, as one team will have many different players as well.
 ![Screenshot 2025-03-19 at 13 44 11](https://github.com/user-attachments/assets/80501dff-7c60-4de9-8783-4ff25d652716)
 
 
@@ -48,6 +48,8 @@ Sporting Events lists all of the events that users can place bets on. It has a o
 
 
 -- Query 2
+Query 2 allows the managers to calculate the total amount of bets that have been placed on the app across all users. This allows the managers to track the total activity that is happening on the app, as if there are a lot of total bets being placed that means the app is running successfully and is being used a lot, which means there is a lot of activity on the app and large changes are not needed to ensure the app gains users or more activity.
+
 SELECT COUNT(betID) AS total_bets FROM Bets;
 
 <img width="506" alt="Screenshot 2025-03-20 at 16 21 45" src="https://github.com/user-attachments/assets/a76c96a7-ebda-4059-b990-b51d4a878b67" />
@@ -88,7 +90,7 @@ Query 5 is a great way for managers to see the betting activity and style of eac
 
 
 -- Query 7 
-
+This query enables the operators to identify how many bets have won, lost, and drawn, and how much money has been lost or won due to the results of those bets. This helps the managers keep track of how much money is going in and out of the app due to the results of the bets, and why that money is being moved. Any money from a lose will be paid out back to the app, any money from a draw will be returned to the user, and any money from a win will be returned to the user along with the payout they receive from winning the bet.
 
 <img width="653" alt="Screenshot 2025-03-20 at 16 27 06" src="https://github.com/user-attachments/assets/c388983f-5fd2-4c54-a5c9-439aa9c698b1" />
 
