@@ -87,7 +87,11 @@ GROUP BY Users.userID, Users.userName
 ORDER BY total_bet_amount DESC
 LIMIT 5;
 
+<img width="691" alt="Screenshot 2025-03-20 at 16 31 31" src="https://github.com/user-attachments/assets/8ee36020-7e5f-47b9-a69c-ab8a0fdb8554" />
+
+
 Query 5 is a great way for managers to see the betting activity and style of each individual user. All users on a betting app have different risk tolerance and betting styles from one another. This means that while one user may place significantly more bets than another, they may have placed a significantly lower dollar amount in total bets. It is very important to be ankle to see the dollar amount in bets of each user in addition to the number of bets they have placed so the manager can see what users place significant money into the site and therefore deserve more rewards and promotions to keep them coming back for more.
+
 
 
 -- Query 6 
@@ -103,6 +107,9 @@ JOIN Transactions ON Users.userID = Transactions.Balance_acctID
 GROUP BY Users.userID, Users.userName;
 
 
+<img width="767" alt="Screenshot 2025-03-20 at 16 30 17" src="https://github.com/user-attachments/assets/2623dc63-055b-49c1-8025-a79f27b51114" />
+
+
 
 
 -- Query 7 
@@ -112,15 +119,21 @@ GROUP BY betType
 ORDER BY total_bets DESC
 LIMIT 1;
 
-
+<img width="653" alt="Screenshot 2025-03-20 at 16 27 06" src="https://github.com/user-attachments/assets/c388983f-5fd2-4c54-a5c9-439aa9c698b1" />
 
 ![q8](https://github.com/user-attachments/assets/a0acac70-dc8e-402d-95ff-aa28ef36530d)
 
 
 
 
+<img width="704" alt="Screenshot 2025-03-20 at 16 25 37" src="https://github.com/user-attachments/assets/993b8c78-5d2c-48fc-8021-b3f58a3b4d55" />
+
+
+
 
 ![q9](https://github.com/user-attachments/assets/73e0ad82-4d38-468b-9054-507a5fdcba16)
+
+
 
 
 
