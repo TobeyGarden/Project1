@@ -37,17 +37,10 @@ Sporting Events lists all of the events that users can place bets on. It has a o
 ![Data_Dictionary_All_Pages](https://github.com/user-attachments/assets/68a5a6f0-19a1-4c3d-98d0-fcbcf3f358a6)
 
 ## Queries
--- Query 1
-Query 1 retrieves the username and email of any user on the database who has placed a bet at any time. It uses the ‘Exists’ function to see if the user has any rows in the ‘Bets’ entity before retrieving the selected information from the ‘Users’ entity.
+![q1](https://github.com/user-attachments/assets/0f85fada-79b0-43f7-b8af-4a9369260ec3)
 
-SELECT userName, userEmail
-FROM Users
-WHERE EXISTS (SELECT* FROM Bets WHERE Users.userID=Bets.Users_userID);
 
 <img width="651" alt="Screenshot 2025-03-20 at 16 19 10" src="https://github.com/user-attachments/assets/cfac2e3c-4851-47fc-8eb1-aa3ae075ccd9" />
-
-
-Query 1 is important for managers because it allows them to see what users have actually placed bets within the site. People often make accounts on sports betting websites but never actually end up placing any bets. Since the website profits are dependent on users making bets it is very useful information to see which users are actually contributing and send them promotions or rewards to their email. 
 
 
 
