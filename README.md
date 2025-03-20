@@ -99,7 +99,8 @@ Events lists all of the events that users can place bets on. It has a one-to-man
 
 
 
-![q9](https://github.com/user-attachments/assets/73e0ad82-4d38-468b-9054-507a5fdcba16)
+![converted_image](https://github.com/user-attachments/assets/ffd171d7-d057-4dfc-a742-16fd2bcb5193)
+
 
 <img width="513" alt="Screenshot 2025-03-20 at 16 49 26" src="https://github.com/user-attachments/assets/2a9ce32f-8e63-41b8-a5cc-d16e1f6f06f8" />
 
