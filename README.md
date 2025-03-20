@@ -89,16 +89,17 @@ ORDER BY betAmount DESC;
 Query 4 is important for managers to see the risky activity within the site. Many users will join to place small bets every now and then with little risk to the company or themselves; however, there are serious betters who often place much larger bets in the hopes of achieving serious payouts. This query allows managers to filter out the smaller bets and be able to see the activity within the much riskier and important side of the site which could have major effects on the success of the company. 
 
 
-
-
-
 -- Query 5
+Query 5 retrieves the user ID, username, and total amount of bets they have placed in dollar amounts from the Users and Bets entities. It uses the sum function to find the total dollar amount in bets that each user has placed before using the group by function to display the data for each user effectively. It then orders the data by the total bet amount in descending order.
+
 SELECT Users.userID, Users.userName, SUM(Bets.betAmount) AS total_bet_amount
 FROM Users
 JOIN Bets ON Users.userID = Bets.Users_userID
 GROUP BY Users.userID, Users.userName
 ORDER BY total_bet_amount DESC
 LIMIT 5;
+
+Query 5 is a great way for managers to see the betting activity and style of each individual user. All users on a betting app have different risk tolerance and betting styles from one another. This means that while one user may place significantly more bets than another, they may have placed a significantly lower dollar amount in total bets. It is very important to be ankle to see the dollar amount in bets of each user in addition to the number of bets they have placed so the manager can see what users place significant money into the site and therefore deserve more rewards and promotions to keep them coming back for more.
 
 
 -- Query 6 
