@@ -65,12 +65,6 @@ SELECT COUNT(betID) AS total_bets FROM Bets;
 -- Query 4
 Query 4 retrieves the username, type of bet, odds on the bet, amount placed, and the result of the bet from the bets entity within the database. It joins the user and bets entity with users serving as the parent and bets as the child. The query retrieves the data on bets where the amount placed exceeds 200 dollars and orders the results from largest to smallest.
 
-SELECT userName, betType, betAmount, betOdds, betResults
-FROM Bets
-JOIN Users ON Bets.Users_userID=Users.userID
-WHERE betAmount > 200
-ORDER BY betAmount DESC;
-
 <img width="651" alt="Screenshot 2025-03-20 at 16 16 43" src="https://github.com/user-attachments/assets/8edb05d0-1443-41e0-a6bb-58aaddbe0adc" />
 
 
@@ -80,12 +74,6 @@ Query 4 is important for managers to see the risky activity within the site. Man
 -- Query 5
 Query 5 retrieves the user ID, username, and total amount of bets they have placed in dollar amounts from the Users and Bets entities. It uses the sum function to find the total dollar amount in bets that each user has placed before using the group by function to display the data for each user effectively. It then orders the data by the total bet amount in descending order.
 
-SELECT Users.userID, Users.userName, SUM(Bets.betAmount) AS total_bet_amount
-FROM Users
-JOIN Bets ON Users.userID = Bets.Users_userID
-GROUP BY Users.userID, Users.userName
-ORDER BY total_bet_amount DESC
-LIMIT 5;
 
 <img width="691" alt="Screenshot 2025-03-20 at 16 31 31" src="https://github.com/user-attachments/assets/8ee36020-7e5f-47b9-a69c-ab8a0fdb8554" />
 
@@ -95,16 +83,6 @@ Query 5 is a great way for managers to see the betting activity and style of eac
 
 
 -- Query 6 
-SELECT 
-    Users.userID, 
-    Users.userName, 
-    SUM(Payments.paymentAmount) AS total_deposits, 
-    SUM(Transactions.transactionAmount) AS total_bets, 
-    (SUM(Payments.paymentAmount) - SUM(Transactions.transactionAmount)) AS net_balance
-FROM Users
-JOIN Payments ON Users.userID = Payments.Balance_acctID
-JOIN Transactions ON Users.userID = Transactions.Balance_acctID
-GROUP BY Users.userID, Users.userName;
 
 
 <img width="767" alt="Screenshot 2025-03-20 at 16 30 17" src="https://github.com/user-attachments/assets/2623dc63-055b-49c1-8025-a79f27b51114" />
@@ -113,11 +91,7 @@ GROUP BY Users.userID, Users.userName;
 
 
 -- Query 7 
-SELECT betType, COUNT(betID) AS total_bets, SUM(betAmount) AS total_amount
-FROM Bets
-GROUP BY betType
-ORDER BY total_bets DESC
-LIMIT 1;
+
 
 <img width="653" alt="Screenshot 2025-03-20 at 16 27 06" src="https://github.com/user-attachments/assets/c388983f-5fd2-4c54-a5c9-439aa9c698b1" />
 
@@ -138,19 +112,6 @@ LIMIT 1;
 
 
 -- Query 10 
-SELECT userID, userName, 
-       (SELECT SUM(Bets.betAmount) 
-        FROM Bets 
-        WHERE Bets.Users_userID = Users.userID) AS total_user_bets
-FROM Users
-WHERE (SELECT SUM(Bets.betAmount) 
-       FROM Bets 
-       WHERE Bets.Users_userID = Users.userID) > 
-      (SELECT AVG(user_total_bets) 
-       FROM (SELECT Users.userID, SUM(Bets.betAmount) AS user_total_bets
-             FROM Users
-             JOIN Bets ON Users.userID = Bets.Users_userID
-             GROUP BY Users.userID) AS avg_bets);
 
 <img width="651" alt="Screenshot 2025-03-20 at 15 52 40" src="https://github.com/user-attachments/assets/39944f87-127f-4ba8-a945-79991339250d" />
 
