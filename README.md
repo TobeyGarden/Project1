@@ -67,7 +67,8 @@ FROM Promotions
 WHERE promotionStatus = 'Active';
 
 
-<img width="651" alt="Screenshot 2025-03-20 at 16 19 10" src="https://github.com/user-attachments/assets/1d86a675-c9af-4934-90f0-9d3cfc600780" />
+<img width="518" alt="Screenshot 2025-03-20 at 16 22 13" src="https://github.com/user-attachments/assets/41ec4200-1e47-48e4-b190-ee14d554ca30" />
+
 
 
 -- Query 4
