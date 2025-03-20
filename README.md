@@ -110,7 +110,8 @@ This query enables the operators to identify how many bets have won, lost, and d
 
 
 
-![q101](https://github.com/user-attachments/assets/4fb714e8-e170-4bdf-9f1b-84da04db557d)
+![q1011](https://github.com/user-attachments/assets/38ac4719-85ba-48b0-b706-e8ae758f9289)
+
 
 
 <img width="651" alt="Screenshot 2025-03-20 at 15 52 40" src="https://github.com/user-attachments/assets/39944f87-127f-4ba8-a945-79991339250d" />
