@@ -70,14 +70,12 @@ SELECT COUNT(betID) AS total_bets FROM Bets;
 
 
 
--- Query 5
-Query 5 retrieves the user ID, username, and total amount of bets they have placed in dollar amounts from the Users and Bets entities. It uses the sum function to find the total dollar amount in bets that each user has placed before using the group by function to display the data for each user effectively. It then orders the data by the total bet amount in descending order.
+
+![q5](https://github.com/user-attachments/assets/a2672b17-9d92-4707-aa8b-0e0c28791771)
 
 
 <img width="691" alt="Screenshot 2025-03-20 at 16 31 31" src="https://github.com/user-attachments/assets/8ee36020-7e5f-47b9-a69c-ab8a0fdb8554" />
 
-
-Query 5 is a great way for managers to see the betting activity and style of each individual user. All users on a betting app have different risk tolerance and betting styles from one another. This means that while one user may place significantly more bets than another, they may have placed a significantly lower dollar amount in total bets. It is very important to be ankle to see the dollar amount in bets of each user in addition to the number of bets they have placed so the manager can see what users place significant money into the site and therefore deserve more rewards and promotions to keep them coming back for more.
 
 
 
