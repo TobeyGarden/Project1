@@ -43,6 +43,7 @@ Query 1 retrieves the username and email of any user on the database who has pla
 SELECT userName, userEmail
 FROM Users
 WHERE EXISTS (SELECT* FROM Bets WHERE Users.userID=Bets.Users_userID);
+
 <img width="651" alt="Screenshot 2025-03-20 at 16 19 10" src="https://github.com/user-attachments/assets/cfac2e3c-4851-47fc-8eb1-aa3ae075ccd9" />
 
 
@@ -74,6 +75,7 @@ FROM Bets
 JOIN Users ON Bets.Users_userID=Users.userID
 WHERE betAmount > 200
 ORDER BY betAmount DESC;
+
 <img width="651" alt="Screenshot 2025-03-20 at 16 16 43" src="https://github.com/user-attachments/assets/8edb05d0-1443-41e0-a6bb-58aaddbe0adc" />
 
 
