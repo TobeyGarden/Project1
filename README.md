@@ -62,13 +62,10 @@ SELECT COUNT(betID) AS total_bets FROM Bets;
 
 
 
--- Query 4
-Query 4 retrieves the username, type of bet, odds on the bet, amount placed, and the result of the bet from the bets entity within the database. It joins the user and bets entity with users serving as the parent and bets as the child. The query retrieves the data on bets where the amount placed exceeds 200 dollars and orders the results from largest to smallest.
+![q4](https://github.com/user-attachments/assets/ffde147f-93d8-41e4-982f-eaeba68558b2)
 
 <img width="651" alt="Screenshot 2025-03-20 at 16 16 43" src="https://github.com/user-attachments/assets/8edb05d0-1443-41e0-a6bb-58aaddbe0adc" />
 
-
-Query 4 is important for managers to see the risky activity within the site. Many users will join to place small bets every now and then with little risk to the company or themselves; however, there are serious betters who often place much larger bets in the hopes of achieving serious payouts. This query allows managers to filter out the smaller bets and be able to see the activity within the much riskier and important side of the site which could have major effects on the success of the company. 
 
 
 -- Query 5
